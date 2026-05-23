@@ -266,6 +266,14 @@
 
     /* <= 600px – mobile: 1 column, centered cards, smaller title */
     @media (max-width: 600px) {
+      .card-item.card-cryptoland {
+        order: -1;
+      }
+
+      .card-item.card-holosim {
+        order: 6;
+      }
+
       .hero {
         margin: 2rem auto 0 auto;
         max-width: 100%;
@@ -305,7 +313,7 @@
 
     <main>
       <ul class="card-grid" role="list">
-        <li class="card-item">
+        <li class="card-item card-holosim">
           <a class="card-link" href="https://holosim-fleet-mining-calculator.vercel.app/" target="_blank" rel="noopener noreferrer">
             <span class="card-logo" aria-hidden="true">
               <img src="./public/Holosim-logo-new.png" alt="" loading="lazy">
@@ -350,7 +358,7 @@
           </a>
         </li>
 
-        <li class="card-item">
+        <li class="card-item card-cryptoland">
           <a class="card-link" href="https://x.com/CryptoAliceTH" target="_blank" rel="noopener noreferrer">
             <span class="card-logo" aria-hidden="true">
               <img src="./public/cryptoland-logo.png" alt="">
