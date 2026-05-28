@@ -215,8 +215,43 @@
     }
 
     /* Nudge only the Holosim logo slightly downward on mobile & desktop */
-    .card-item:first-child .card-logo {
+    .card-holosim .card-logo {
       margin-top: 0.5rem;
+    }
+
+    /* Holosim – Star Atlas floats above title; title stays vertically centered like other cards */
+    .card-holosim .card-link {
+      overflow: visible;
+    }
+
+    .card-holosim .card-content {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-holosim .card-title {
+      flex: none;
+    }
+
+    .card-holosim .card-brand-sa {
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+      transform: translate(-10px, 6px);
+      display: flex;
+      align-items: center;
+      line-height: 0;
+      pointer-events: none;
+    }
+
+    .card-holosim .card-brand-sa img {
+      display: block;
+      height: 28px;
+      width: auto;
+      max-width: 199px;
+      object-fit: contain;
+      object-position: left center;
     }
 
     /* Project name – right of logo, vertically centered */
@@ -329,7 +364,12 @@
             <span class="card-logo" aria-hidden="true">
               <img src="./public/Holosim-logo-new.png" alt="" loading="lazy">
             </span>
-            <p class="card-title">Holosim Fleet<br>mining calculator</p>
+            <span class="card-content">
+              <span class="card-brand-sa">
+                <img src="./public/star-atlas-logo-black.png" alt="Star Atlas">
+              </span>
+              <p class="card-title">Holosim Fleet<br>mining calculator</p>
+            </span>
           </a>
         </li>
 
