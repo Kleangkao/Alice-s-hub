@@ -230,15 +230,35 @@
       min-width: 0;
     }
 
-    .card-holosim .card-title {
-      flex: none;
+    .card-holosim .card-title-head {
+      position: relative;
+      display: block;
+      width: fit-content;
+    }
+
+    .card-holosim .card-title-line {
+      display: block;
+      margin: 0;
+      padding: 0;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.4;
+      text-align: left;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45);
+    }
+
+    @media (min-width: 900px) {
+      .card-holosim .card-title-line {
+        font-size: 1.5rem;
+      }
     }
 
     .card-holosim .card-brand-sa {
       position: absolute;
-      left: 0;
+      left: 50%;
       bottom: 100%;
-      transform: translate(-10px, 6px);
+      transform: translate(-50%, 10px);
       display: flex;
       align-items: center;
       line-height: 0;
@@ -365,10 +385,13 @@
               <img src="./public/Holosim-logo-new.png" alt="" loading="lazy">
             </span>
             <span class="card-content">
-              <span class="card-brand-sa">
-                <img src="./public/star-atlas-logo-black.png" alt="Star Atlas">
+              <span class="card-title-head">
+                <span class="card-brand-sa">
+                  <img src="./public/star-atlas-logo-black.png" alt="Star Atlas">
+                </span>
+                <span class="card-title-line">Holosim Fleet</span>
               </span>
-              <p class="card-title">Holosim Fleet<br>mining calculator</p>
+              <span class="card-title-line">mining calculator</span>
             </span>
           </a>
         </li>
